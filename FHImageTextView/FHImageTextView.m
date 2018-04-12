@@ -7,6 +7,7 @@
 //
 
 #import "FHImageTextView.h"
+#import <Masonry/Masonry.h>
 
 @implementation FHImageTextView {
     @protected

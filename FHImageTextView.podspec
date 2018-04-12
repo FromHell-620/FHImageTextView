@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "FHImageTextView"
-  s.version      = "0.1"
+  s.version      = "0.2"
   s.summary      = "view."
   s.homepage     = "https://github.com/FromHell-620/FHImageTextView"
   s.license      = "MIT"
