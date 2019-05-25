@@ -28,6 +28,10 @@ typedef NS_ENUM(NSInteger,FHImageTextContronState) {
 
 @property (nonatomic,assign,readonly) FHImageTextType type;// default is TextLeft
 
+@property (nonatomic,assign) UIEdgeInsets contentInsets;
+
+@property (nonatomic,assign) CGFloat textImageSpace;
+
 @property (nonatomic,assign,getter=isSelected) BOOL selected;
 
 - (void)setImage:(UIImage *)image forState:(FHImageTextContronState)state;

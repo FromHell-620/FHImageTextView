@@ -67,10 +67,14 @@
     
     _imageView = [UIImageView new];
     _imageView.contentMode = UIViewContentModeCenter;
-    [self addSubview:_imageView];
+    [_backgroundImageView addSubview:_imageView];
     
     _textLabel = [UILabel new];
-    [self addSubview:_textLabel];
+    [_backgroundImageView addSubview:_textLabel];
+    
+    [_backgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.insets(UIEdgeInsetsZero);
+    }];
 }
 
 - (void)__setupSubViewslayout {
@@ -93,6 +97,7 @@
             [_imageView mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.centerX.offset(0);
                 make.top.equalTo(_textLabel.mas_bottom).offset(4);
+                make.bottom.offset(0);
             }];
         } break;
             
@@ -145,6 +150,16 @@
 }
 
 #pragma mark- public
+- (void)setContentInsets:(UIEdgeInsets)contentInsets {
+    _contentInsets = contentInsets;
+    [self setNeedsUpdateConstraints];
+}
+
+- (void)setTextImageSpace:(CGFloat)textImageSpace {
+    _textImageSpace = textImageSpace;
+    [self setNeedsUpdateConstraints];
+}
+
 - (void)setSelected:(BOOL)selected {
     _selected = selected;
     [self setNeedsDisplay];
@@ -191,6 +206,36 @@
     [_textLabel mas_updateConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(textSize.width);
     }];
+    [_backgroundImageView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.edges.insets(self.contentInsets);
+    }];
+    switch (self.type) {
+        case FHImageTextTypeTextLeft: {
+            [_imageView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(_textLabel.mas_right).offset(self.textImageSpace);
+            }];
+        } break;
+
+        case FHImageTextTypeTextTop: {
+            [_imageView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(_textLabel.mas_bottom).offset(self.textImageSpace);
+            }];
+        } break;
+        
+        case FHImageTextTypeTextRight: {
+            [_textLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(_imageView.mas_right).offset(self.textImageSpace);
+            }];
+        } break;
+            
+        case FHImageTextTypeTextBottom: {
+            [_textLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(_imageView.mas_bottom).offset(self.textImageSpace);
+            }];
+        }
+        default:
+            break;
+    }
     [self sizeToFit];
 }
 

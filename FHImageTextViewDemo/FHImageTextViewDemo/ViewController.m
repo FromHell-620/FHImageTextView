@@ -21,6 +21,8 @@
     FHImageTextView *view = [[FHImageTextView alloc] initWithType:FHImageTextTypeTextLeft];
     view.backgroundColor = UIColor.redColor;
     [self.view addSubview:view];
+    view.contentInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+    view.textImageSpace = 20;
     [view setText:@"北京" forState:FHImageTextContronStateNormal];
     [view setText:@"北京这个地方不咋地" forState:FHImageTextContronStateSelected];
 
