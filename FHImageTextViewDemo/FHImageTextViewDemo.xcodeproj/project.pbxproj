@@ -15,6 +15,8 @@
 		881AE51F207F110E003EE9F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 881AE51E207F110E003EE9F2 /* main.m */; };
 		881AE529207F110E003EE9F2 /* FHImageTextViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 881AE528207F110E003EE9F2 /* FHImageTextViewDemoTests.m */; };
 		881AE534207F110E003EE9F2 /* FHImageTextViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 881AE533207F110E003EE9F2 /* FHImageTextViewDemoUITests.m */; };
+		C98BF35D2299095700E9FA6C /* FHImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BF35B2299095700E9FA6C /* FHImageTextView.m */; };
+		FEF4C9D3354795588567A9CF /* Pods_FHImageTextViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC97EAE5FA251C46C43716 /* Pods_FHImageTextViewDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CBCC9D373874116F1C81D70 /* Pods-FHImageTextViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FHImageTextViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FHImageTextViewDemo/Pods-FHImageTextViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		881AE50C207F110C003EE9F2 /* FHImageTextViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FHImageTextViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		881AE50F207F110C003EE9F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		881AE510207F110C003EE9F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +54,10 @@
 		881AE52F207F110E003EE9F2 /* FHImageTextViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FHImageTextViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		881AE533207F110E003EE9F2 /* FHImageTextViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FHImageTextViewDemoUITests.m; sourceTree = "<group>"; };
 		881AE535207F110E003EE9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3DC97EAE5FA251C46C43716 /* Pods_FHImageTextViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FHImageTextViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56C86964B48721CCB4A0955 /* Pods-FHImageTextViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FHImageTextViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FHImageTextViewDemo/Pods-FHImageTextViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C98BF35B2299095700E9FA6C /* FHImageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHImageTextView.m; path = ../FHImageTextView/FHImageTextView.m; sourceTree = "<group>"; };
+		C98BF35C2299095700E9FA6C /* FHImageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FHImageTextView.h; path = ../FHImageTextView/FHImageTextView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF4C9D3354795588567A9CF /* Pods_FHImageTextViewDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +86,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50E24562C46BD5C0AD04B6DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC97EAE5FA251C46C43716 /* Pods_FHImageTextViewDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		881AE503207F110C003EE9F2 = {
 			isa = PBXGroup;
 			children = (
+				C98BF35C2299095700E9FA6C /* FHImageTextView.h */,
+				C98BF35B2299095700E9FA6C /* FHImageTextView.m */,
 				881AE50E207F110C003EE9F2 /* FHImageTextViewDemo */,
 				881AE527207F110E003EE9F2 /* FHImageTextViewDemoTests */,
 				881AE532207F110E003EE9F2 /* FHImageTextViewDemoUITests */,
 				881AE50D207F110C003EE9F2 /* Products */,
+				A416D6BF4CE1B95CECC1B602 /* Pods */,
+				50E24562C46BD5C0AD04B6DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +152,15 @@
 			path = FHImageTextViewDemoUITests;
 			sourceTree = "<group>";
 		};
+		A416D6BF4CE1B95CECC1B602 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B56C86964B48721CCB4A0955 /* Pods-FHImageTextViewDemo.debug.xcconfig */,
+				1CBCC9D373874116F1C81D70 /* Pods-FHImageTextViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 881AE538207F110E003EE9F2 /* Build configuration list for PBXNativeTarget "FHImageTextViewDemo" */;
 			buildPhases = (
+				E6DDCBD55229A9106A012AFB /* [CP] Check Pods Manifest.lock */,
 				881AE508207F110C003EE9F2 /* Sources */,
 				881AE509207F110C003EE9F2 /* Frameworks */,
 				881AE50A207F110C003EE9F2 /* Resources */,
+				C9CFE24BA6977321F8E855CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,12 +288,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C9CFE24BA6977321F8E855CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FHImageTextViewDemo/Pods-FHImageTextViewDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FHImageTextViewDemo/Pods-FHImageTextViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6DDCBD55229A9106A012AFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FHImageTextViewDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		881AE508207F110C003EE9F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				881AE514207F110C003EE9F2 /* ViewController.m in Sources */,
+				C98BF35D2299095700E9FA6C /* FHImageTextView.m in Sources */,
 				881AE51F207F110E003EE9F2 /* main.m in Sources */,
 				881AE511207F110C003EE9F2 /* AppDelegate.m in Sources */,
 			);
@@ -431,6 +502,7 @@
 		};
 		881AE539207F110E003EE9F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B56C86964B48721CCB4A0955 /* Pods-FHImageTextViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +520,7 @@
 		};
 		881AE53A207F110E003EE9F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CBCC9D373874116F1C81D70 /* Pods-FHImageTextViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

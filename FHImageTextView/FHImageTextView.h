@@ -10,30 +10,31 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger,FHImageTextType) {
+    FHImageTextTypeTextLeft,
+    FHImageTextTypeTextTop,
+    FHImageTextTypeTextRight,
+    FHImageTextTypeTextBottom
+};
+
+typedef NS_ENUM(NSInteger,FHImageTextContronState) {
+    FHImageTextContronStateNormal,
+    FHImageTextContronStateSelected
+};
+
 @interface FHImageTextView : UIView
 
-/**
- initialize a image-text view
+- (instancetype)initWithType:(FHImageTextType)type;
 
- @param image normal image .
- @param text normal text
- @return a instance .
- */
-- (instancetype)initWithImage:(nullable UIImage *)image text:(nullable NSString *)text;
+@property (nonatomic,assign,readonly) FHImageTextType type;// default is TextLeft
 
 @property (nonatomic,assign,getter=isSelected) BOOL selected;
 
-@property (nonatomic,strong,nullable) UIImage *image;
+- (void)setImage:(UIImage *)image forState:(FHImageTextContronState)state;
 
-@property (nonatomic,copy,nullable) NSString *text;
+- (void)setText:(NSString *)text forState:(FHImageTextContronState)state;
 
-@property (nonatomic,strong,nullable) UIImage *selectedImage;
-
-@property (nonatomic,copy,nullable) NSString *selectedText;
-
-@property (nonatomic,strong,nullable) UIImage *backgroundImage;
-
-@property (nonatomic,strong,nullable) UIImage *selectedBackgroundImage;
+- (void)setBackgroundImage:(UIImage *)backgroundImage forState:(FHImageTextContronState)state;
 
 - (void)configationImageTextView:(nullable void(^)(UIImageView *imageView,UILabel *label))configationHandle;
 
