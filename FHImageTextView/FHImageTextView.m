@@ -115,7 +115,7 @@
             
         case FHImageTextTypeTextBottom: {
             [_textLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.left.right.bottom.offset(0);
+                make.centerX.bottom.offset(0);
                 make.top.equalTo(_imageView.mas_bottom).offset(4);
             }];
             
