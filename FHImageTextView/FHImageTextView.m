@@ -236,11 +236,6 @@
         default:
             break;
     }
-    [self sizeToFit];
-}
-
-- (CGSize)sizeThatFits:(CGSize)size {
-    return [self systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
 }
 
 /*
